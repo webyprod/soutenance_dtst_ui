@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h2>Créer un utilisateur</h2>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div *ngFor="let field of fields" class="mb-3">
+      <label>{{field.label}}</label>
+      <input [type]="field.type" [formControlName]="field.name" class="form-control">
+      <div *ngIf="form.get(field.name)?.invalid && form.get(field.name)?.touched" class="text-danger">
+        Champ {{field.label}} obligatoire
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Créer</button>
+  </form>
+</div>
