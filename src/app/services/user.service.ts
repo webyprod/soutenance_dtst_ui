@@ -19,7 +19,8 @@ export interface User {
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:8080/api/users';
+  // private apiUrl = 'http://localhost:8080/api/users'; # localhost
+  private apiUrl = '/api/users'; // cloud
 
   constructor(private http: HttpClient) {}
 
