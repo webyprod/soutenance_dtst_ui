@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { ProfileUserComponent } from './components/profile-user/profile-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     HomeComponent,
     CreateUserComponent,
     UpdateUserComponent,
+    ProfileUserComponent,
   ],
   imports: [
     BrowserModule,

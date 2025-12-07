@@ -1,0 +1,30 @@
+<div class="container mt-5" *ngIf="user; else notFound">
+  <div class="card shadow-lg border-0">
+    <div class="card-header bg-info text-white text-center">
+      <h4 class="mb-0">
+        <i class="bi bi-person-circle"></i> Profil utilisateur
+      </h4>
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>ID :</strong> {{user.id}}</li>
+        <li class="list-group-item"><strong>Username :</strong> {{user.username}}</li>
+        <li class="list-group-item"><strong>Prénom :</strong> {{user.firstName}}</li>
+        <li class="list-group-item"><strong>Nom :</strong> {{user.lastName}}</li>
+        <li class="list-group-item"><strong>Âge :</strong> {{user.age}}</li>
+        <li class="list-group-item"><strong>Pays :</strong> {{user.country}}</li>
+      </ul>
+    </div>
+    <div class="card-footer text-center">
+      <a routerLink="/users" class="btn btn-outline-primary">
+        <i class="bi bi-arrow-left"></i> Retour à la liste
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="alert alert-danger mt-5 text-center">
+    <i class="bi bi-exclamation-triangle"></i> Utilisateur non trouvé
+  </div>
+</ng-template>
