@@ -17,3 +17,6 @@ spec:
           image: awsfox92/users-front:project
           ports:
             - containerPort: 80
+          env:
+            - name: BACKEND_HOST
+              value: "users-service:8080"
